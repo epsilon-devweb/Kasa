@@ -1,0 +1,52 @@
+@use './variables' as *;
+
+/* MIXINS FLEXBOX */
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MIXINS FONT */
+
+@mixin font-title {
+  font-family: $primary-font;
+  font-size: $font-size-18;
+}
+
+//MIXINS BREAKPOINT
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}

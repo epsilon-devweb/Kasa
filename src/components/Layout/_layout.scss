@@ -1,0 +1,17 @@
+@use '../../scss/utils/mixins' as *;
+@use '../../scss/utils/variables' as *;
+
+
+
+html,
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px 0px 20px;
+}
