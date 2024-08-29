@@ -1,5 +1,3 @@
-import "../../scss/style.scss"
-
 export default function Card({title, cover,id}){
     return (
         <>
@@ -10,4 +8,3 @@ export default function Card({title, cover,id}){
         </>
     )
 }
-

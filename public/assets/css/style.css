@@ -102,7 +102,7 @@ body {
   margin: 0;
 }
 
-.banner {
+.HomeBanner {
   display: flex;
   flex-direction: column;
   border-radius: 0.63em;
@@ -111,7 +111,7 @@ body {
   width: 100%;
   height: 111px;
 }
-.banner_img {
+.HomeBanner > img {
   display: flex;
   width: 100%;
   height: 100%;
@@ -119,7 +119,12 @@ body {
   object-fit: cover;
   opacity: 0.6;
 }
-.banner > p {
+@media screen and (min-width: 1440px) {
+  .HomeBanner > img {
+    border-radius: 25px;
+  }
+}
+.HomeBanner > p {
   position: absolute;
   width: 225px;
   color: #FFFFFF;
@@ -131,7 +136,7 @@ body {
   padding: 31px 94px 32px 16px;
 }
 @media screen and (min-width: 1440px) {
-  .banner > p {
+  .HomeBanner > p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,10 +147,47 @@ body {
   }
 }
 @media screen and (min-width: 1440px) {
-  .banner {
+  .HomeBanner {
     margin: 0px 100px;
     width: 1240px;
     height: 223px;
+    border-radius: 25px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.AboutBanner {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.63em;
+  background-color: #000000;
+  position: relative;
+  width: 100%;
+  height: 111px;
+}
+.AboutBanner > img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.63em;
+  object-fit: cover;
+  opacity: 0.6;
+}
+@media screen and (min-width: 1440px) {
+  .AboutBanner > img {
+    border-radius: 25px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .AboutBanner {
+    margin: 0px 100px;
+    width: 1240px;
+    height: 223px;
+    border-radius: 25px;
   }
 }
 
@@ -159,17 +201,16 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 255px;
-  background-color: none;
   gap: 20px;
 }
 @media screen and (min-width: 1440px) {
   .card_container {
     display: grid;
-    align-content: center;
     grid-template-columns: repeat(3, 340px);
     grid-template-rows: repeat(2, 340px);
     grid-column-gap: 60px;
     grid-row-gap: 60px;
+    align-content: center;
     justify-content: center;
     border-radius: 25px;
     max-width: 1240px;
@@ -197,9 +238,9 @@ body {
 .card > p {
   position: absolute;
   width: 100px;
-  color: white;
-  font-family: Montserrat;
-  font-size: 18px;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
   font-weight: 700;
   text-align: left;
   padding-left: 20px;
@@ -209,18 +250,76 @@ body {
   align-items: end;
   width: 100%;
   height: 255px;
-  border-radius: 10px;
+  border-radius: 0.63em;
   object-fit: cover;
 }
 @media screen and (min-width: 1440px) {
   .card > img {
-    display: flex;
-    align-items: end;
-    width: 100%;
     height: 340px;
-    border-radius: 10px;
-    object-fit: cover;
+    border-radius: 0.63em;
   }
+}
+
+.CollapseContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  gap: 38px;
+}
+@media screen and (min-width: 1440px) {
+  .CollapseContainer {
+    max-width: 1023px;
+    padding: 25px 0px;
+  }
+}
+.CollapseContainer .collapse_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF5E5E;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.CollapseContainer .collapse_header .collapse_title {
+  display: flex;
+  padding: 10px 20px 10px 15px;
+  align-items: center;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}
+.CollapseContainer .collapse_header .collapse_arrow {
+  transition: transform 0.3s ease;
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+}
+.CollapseContainer .collapse_header .collapse_arrow.open {
+  transform: rotate(180deg);
+}
+@media screen and (min-width: 1440px) {
+  .CollapseContainer .collapse_header {
+    min-height: 54px;
+  }
+}
+.CollapseContainer .collapse_content {
+  overflow: hidden;
+  transition: 0.3s ease;
+  max-height: 0;
+  background-color: #f8f8f8;
+  border-radius: 0 0 5px 5px;
+}
+.CollapseContainer .collapse_content .collapse_text {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 25px;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

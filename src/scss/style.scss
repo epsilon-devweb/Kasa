@@ -4,6 +4,9 @@
 @use '../components/Header/header' as *;
 @use '../components/Footer/footer' as *;
 @use '../components/Layout/layout' as *;
-@use '../components/Banner/banner' as *;
+@use '../components/HomeBanner/homeBanner' as *;
+@use '../components/AboutBanner/aboutBanner' as *;
 @use '../components/Card/card' as *;
+@use '../components/Collapse/collapse' as *;
+
 

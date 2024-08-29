@@ -7,33 +7,27 @@ body {
 }
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-center-column;
     width: 100%;
-    background-color: black;
+    background-color: $color-black;
     margin-top: 27px;
 
     &_content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-center-column;
         padding: 66px 120px 58px 120px;
 
         &_img {
-            display: flex;
+            @include flex;
             width: 122px;
             height: 39px;
         }
 
         &>p {
             text-align: center;
-            color: white;
-            font-family: Montserrat;
+            color: $color-white;
+            font-family: $primary-font;
             font-size: 12px;
-            font-style: normal;
-            font-weight: 500;
+            font-weight: $font-weight-500;
             padding: 0px 10px;
 
             @include desktop {

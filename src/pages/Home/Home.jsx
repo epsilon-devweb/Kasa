@@ -1,11 +1,12 @@
-import Banner from "../../components/Banner/Banner"
+import HomeBanner from "../../components/HomeBanner/HomeBanner";
 import Card from "../../components/Card/Card"
 import data from '../../data/logements.json';
+
 
 export default function Home() {
     return(
         <>
-            <Banner />
+            <HomeBanner />
             <div className="card_container">
                 <HousingList />
             </div>
