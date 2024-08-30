@@ -10,7 +10,7 @@ body {
     @include flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
     padding: 20px;
 
     &_img {
@@ -44,7 +44,8 @@ body {
     }
 
     @include desktop {
-        max-width: 1240px;
+        min-width: 1240px;
+        margin: 0 auto;
     }
 
 }

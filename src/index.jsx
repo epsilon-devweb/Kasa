@@ -9,7 +9,7 @@ import Layout from './components/Layout/Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <BrowserRouter>
       <Layout>
         <Routes>
@@ -20,5 +20,5 @@ root.render(
         </Routes>
       </Layout>
     </BrowserRouter>
-  //</React.StrictMode>
+  </React.StrictMode>
 );
