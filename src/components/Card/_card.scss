@@ -12,6 +12,22 @@ body {
     min-height: 255px;
     gap: 20px;
 
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 320px);
+        grid-template-rows: repeat(3, 320px);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        align-content: center;
+        justify-content: center;
+        border-radius: 25px;
+        max-width: 728px;
+        background-color: #F6F6F6;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        padding: 30px 0px;
+    }
+
     @include desktop {
         display: grid;
         grid-template-columns: repeat(3, 340px);
@@ -38,6 +54,13 @@ body {
     height: 255px;
     border-radius: 10px;
 
+    @include tablet {
+        padding: 0px;
+        
+        width: 320px;
+        height: 320px;
+    }
+
 
     @include desktop {
         width: 340px;
@@ -54,10 +77,16 @@ body {
         text-align: left;
         padding-left: 20px;
 
+        @include tablet {
+            display: flex;
+            flex-wrap:wrap;
+            max-width: 170px;
+        }
+
         @include desktop {
             display: flex;
             flex-wrap:wrap;
-            max-width: 150px;
+            max-width: 170px;
         }
     }
 
@@ -68,6 +97,11 @@ body {
         height: 255px;
         border-radius: $border-radius-10;
         object-fit: cover;
+
+        @include tablet {
+            height: 320px;
+            border-radius: $border-radius-10;
+        }
 
         @include desktop {
             height: 340px;

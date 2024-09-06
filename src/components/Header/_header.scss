@@ -43,6 +43,11 @@ body {
         }
     }
 
+    @include tablet {
+        min-width: 728px;
+        margin: 0 auto;
+    }
+
     @include desktop {
         min-width: 1240px;
         margin: 0 auto;

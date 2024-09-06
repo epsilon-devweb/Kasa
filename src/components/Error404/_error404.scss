@@ -1,0 +1,62 @@
+@use '../../scss/utils/mixins' as *;
+@use '../../scss/utils/variables' as *;
+
+.error404 {
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    background-color: $color-white;
+    gap: 113px;
+    padding-bottom: 113px;
+
+    .error404_title {
+        margin-top: 113px;
+        margin-bottom: 0;
+        color: $primary-color;
+        font-family: $primary-font;
+        font-size: 113px;
+    }
+
+    .error404_subtitle {
+        text-align: center;
+        width: 260px;
+        color: #FF6060;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25px;
+        margin: 0px;
+    }
+
+    .error404_link {
+        color: black;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+        text-decoration-line: underline;
+    }
+
+    @include tablet{
+        .error404_title {
+            font-size: 144px;
+        }
+
+        .error404_subtitle {
+            width: 100%;
+            font-size: 24px;
+        }
+    }
+
+    @include desktop {
+        .error404_title {
+            font-size: 288px;
+        }
+
+        .error404_subtitle {
+            min-width: 100%;
+            font-size: 36px;
+        }
+    }
+}

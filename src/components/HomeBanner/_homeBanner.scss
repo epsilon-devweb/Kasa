@@ -47,9 +47,13 @@ body {
         }
     }
 
+    @include tablet {
+        max-width: 728px;
+    }
+
     @include desktop {
         margin: 0px 100px;
-        width: 1240px;
+        min-width: 1240px;
         height: 223px;
         border-radius: 25px;
     }

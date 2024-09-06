@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  max-width: 100%;
   padding: 20px;
 }
 .header_img {
@@ -40,7 +40,8 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .header {
-    max-width: 1240px;
+    min-width: 1240px;
+    margin: 0 auto;
   }
 }
 
@@ -55,13 +56,14 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: black;
+  background-color: #000000;
   margin-top: 27px;
 }
 .footer_content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 66px 120px 58px 120px;
 }
 .footer_content_img {
@@ -71,10 +73,9 @@ body {
 }
 .footer_content > p {
   text-align: center;
-  color: white;
-  font-family: Montserrat;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  font-style: normal;
   font-weight: 500;
   padding: 0px 10px;
 }
@@ -89,12 +90,20 @@ body {
   margin: 0;
 }
 
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 0px 20px 0px 20px;
+  flex: 1;
 }
 
 html,
@@ -112,7 +121,6 @@ body {
   height: 111px;
 }
 .HomeBanner > img {
-  display: flex;
   width: 100%;
   height: 100%;
   border-radius: 0.63em;
@@ -170,7 +178,6 @@ body {
   height: 111px;
 }
 .AboutBanner > img {
-  display: flex;
   width: 100%;
   height: 100%;
   border-radius: 0.63em;
@@ -237,13 +244,20 @@ body {
 }
 .card > p {
   position: absolute;
-  width: 100px;
+  width: 30%;
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   text-align: left;
   padding-left: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .card > p {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+  }
 }
 .card > img {
   display: flex;
@@ -276,20 +290,20 @@ body {
 }
 .CollapseContainer .collapse_header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #FF5E5E;
-  cursor: pointer;
+  justify-content: center;
+  justify-content: space-between;
+  background-color: #FF6060;
   border-radius: 5px;
+  cursor: pointer;
 }
 .CollapseContainer .collapse_header .collapse_title {
   display: flex;
   padding: 10px 20px 10px 15px;
   align-items: center;
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-style: normal;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
   font-weight: 700;
   margin: 0;
 }
@@ -315,11 +329,47 @@ body {
   border-radius: 0 0 5px 5px;
 }
 .CollapseContainer .collapse_content .collapse_text {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
   line-height: 25px;
   padding: 10px;
+}
+
+.error404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #FFFFFF;
+  gap: 113px;
+}
+.error404 .error404_title {
+  margin-top: 113px;
+  margin-bottom: 0;
+  color: #FF6060;
+  font-family: "Montserrat", sans-serif;
+  font-size: 96px;
+}
+.error404 .error404_subtitle {
+  text-align: center;
+  width: 260px;
+  color: #FF6060;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  margin: 0px;
+}
+.error404 .error404_link {
+  color: black;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  /* 19.964px */
+  text-decoration-line: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

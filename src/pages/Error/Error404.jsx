@@ -1,5 +1,9 @@
 export default function Error404() {
-    return(
-        <p>error404</p>
+    return (
+        <div className="error404">
+            <h1 className="error404_title">404</h1>
+            <p className="error404_subtitle">Oups! La page que vous demandez n'existe pas.</p>
+            <a href="/" className="error404_link">Retourner sur la page d’accueil</a>
+        </div>
     )
 }
