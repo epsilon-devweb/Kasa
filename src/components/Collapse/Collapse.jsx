@@ -1,10 +1,11 @@
 import React, { useState, useRef} from 'react';
+import arrowImg from '../../assets/images/arrow.svg';
 
 export default function Collapse({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
 
-    const arrow = isOpen ? '../../../assets/images/arrow.svg' : '../../../assets/images/arrow.svg';
+    const arrow = isOpen ? arrowImg : arrowImg;
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen);

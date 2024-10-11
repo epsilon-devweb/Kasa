@@ -4,9 +4,14 @@
 .CollapseContainer {
     @include flex-column;
     width: 100%;
+    padding-top: 20px;
     margin-bottom: 10px;
     border-radius: 5px;
     gap: 38px;
+
+    @include tablet {
+        max-width: 728px;
+    }
 
     @include desktop {
         max-width: 1023px;

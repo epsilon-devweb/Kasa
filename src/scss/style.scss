@@ -4,11 +4,13 @@
 @use '../components/Header/header' as *;
 @use '../components/Footer/footer' as *;
 @use '../components/Layout/layout' as *;
-@use '../components/HomeBanner/homeBanner' as *;
-@use '../components/AboutBanner/aboutBanner' as *;
+@use '../components/Banner/banner' as *;
 @use '../components/Card/card' as *;
+@use '../components/Slideshow/slideshow' as *;
+@use '../components/HousingContent/housingContent' as *;
 @use '../components/Collapse/collapse' as *;
-@use '../components/Error404/error404' as *;
+@use '../pages/Error/error404' as *;
+@use '../pages/Housing/housing' as *;
 
 
 

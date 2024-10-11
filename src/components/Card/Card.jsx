@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
+
 export default function Card({title, cover,id}){
-    return (
-        <>
-            <div className="card">
-                <p>{title}</p>
-                <img src={cover} alt="cover"/>
-            </div>
-        </>
+    return ( 
+        <Link to={`/housing/${id}`} className="card">
+            <p>{title}</p>
+            <img src={cover} alt="cover"/>
+        </Link> 
     )
 }

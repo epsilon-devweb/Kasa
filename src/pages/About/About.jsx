@@ -1,11 +1,11 @@
 import React from 'react';
-import AboutBanner from "../../components/AboutBanner/AboutBanner";
+import Banner from "../../components/Banner/Banner";
 import Collapse from "../../components/Collapse/Collapse";
 
 export default function About() {
     return (
         <>
-            <AboutBanner />
+            <Banner/>
             <div className='CollapseContainer'>
                 <Collapse title="Fiabilité">
                     <div>Les annonces postées sur Kasa garantissent un fiabilité totale.

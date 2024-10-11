@@ -1,0 +1,65 @@
+.housingContent {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+
+    h1 {
+        color: #FF6060;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    p {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        margin: 0;
+    }
+}
+
+.tagContent {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 5px;
+
+    .tagSpan {
+        display: flex;
+        width: auto;
+        height: 18px;
+        padding: 4px 8px;
+        border-radius: 5px;
+        background: #FF6060;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+    }
+}
+
+.ratingContent {
+   display: flex;
+   flex-direction: row;
+   padding-top: 8px;
+   gap: 5px;
+
+   .ratingStar {
+         max-width: 18px;
+         min-height: auto;
+   }
+}
