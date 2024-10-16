@@ -1,7 +1,4 @@
 @use '../../scss/utils/mixins' as *;
-@use '../../scss/utils/variables' as *;
-
-
 
 html,
 body {
@@ -9,13 +6,15 @@ body {
 }
 
 .box {
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
 }
 
 .container {
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
     padding: 0px 20px 0px 20px;

@@ -1,7 +1,7 @@
 import React, { useState, useRef} from 'react';
 import arrowImg from '../../assets/images/arrow.svg';
 
-export default function Collapse({ title, children }) {
+export default function Collapse({ title, children,}) {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
 

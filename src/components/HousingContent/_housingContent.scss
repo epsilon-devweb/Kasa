@@ -1,16 +1,17 @@
+@use '../../scss/utils/mixins' as *;
+
 .housingContent {
     display: flex;
-    width: 100%;
-    height: auto;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 10px;
+    width: 100%;
+    height: auto;
+    gap: 15px;
 
     h1 {
         color: #FF6060;
         font-family: Montserrat;
         font-size: 22px;
-        font-style: normal;
         font-weight: 500;
         margin: 0;
     }
@@ -19,47 +20,84 @@
         color: #000;
         font-family: Montserrat;
         font-size: 16px;
-        font-style: normal;
         font-weight: 500;
         margin: 0;
     }
-}
 
-.tagContent {
-    display: flex;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 10px;
-    padding-top: 5px;
-
-    .tagSpan {
-        display: flex;
-        width: auto;
-        height: 18px;
-        padding: 4px 8px;
-        border-radius: 5px;
-        background: #FF6060;
-        justify-content: center;
-        align-items: center;
-        color: #FFF;
-        text-align: center;
-        font-family: Montserrat;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 700;
+    @include tablet {
+        border-radius: 25px;
+        max-width: 728px;
     }
+
+    @include desktop {
+        min-width: 1240px;
+    }
+
+    .tagContent {
+        display: flex;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    
+        .tagSpan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: 18px;
+            padding: 4px 8px;
+            border-radius: 5px;
+            background: #FF6060;
+            color: #FFF;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+    
+    .ratingHostContent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    
+        .ratingContent {
+            display: flex;
+            gap: 5px;
+    
+            .ratingStar {
+                max-width: 18px;
+                min-height: auto;
+            }
+        }
+    
+        .hostContent {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+    
+            .hostName {
+                width: 93px;
+                text-align: right;
+                color: #FF6060;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 500;
+                margin: 0;
+            }
+    
+            .hostPicture {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+
 }
 
-.ratingContent {
-   display: flex;
-   flex-direction: row;
-   padding-top: 8px;
-   gap: 5px;
 
-   .ratingStar {
-         max-width: 18px;
-         min-height: auto;
-   }
-}
+

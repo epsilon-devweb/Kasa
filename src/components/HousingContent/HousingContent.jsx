@@ -1,6 +1,8 @@
+import Collapse from "../../components/Collapse/Collapse";
+
 export default function HousingContent(props) {
 
-    const {title, location, tags, rating} = props.housing;
+    const {title, location, tags, rating, host, description, equipments} = props.housing;
 
     const starSvg = (isColored) => (
         <svg xmlns="http://www.w3.org/2000/svg" width="110" height="30" viewBox="0 0 98 19" fill="none">
@@ -18,14 +20,31 @@ export default function HousingContent(props) {
                     <span key={index} className="tagSpan">{tagItem}</span>
                 ))}
             </div>
-            <div className="ratingContent">
-                {Array.from({ length: 5 }, (_, index) => (
-                    <span key={index} className="ratingStar">
-                        {starSvg(index < rating)}
-                    </span>
-                ))}
+            <div className="ratingHostContent">
+                <div className="ratingContent">
+                    {Array.from({ length: 5 }, (_, index) => (
+                        <span key={index} className="ratingStar">
+                            {starSvg(index < rating)}
+                        </span>
+                    ))}
+                </div>
+                <div className="hostContent">
+                    <p className="hostName">{host.name}</p>
+                    <img src={host.picture} alt={host.name} className="hostPicture" />
+                </div>
             </div>
-            
+            <div className="HousingCollapseContainer">
+                <Collapse title="Description">
+                    <p>{description}</p>
+                </Collapse>
+                <Collapse title="Équipements">
+                    <ul>
+                    {equipments.map((equipment, index) => (
+                        <li key={index}>{equipment}</li>
+                        ))}
+                    </ul>
+                </Collapse>
+            </div>
         </div>
     );
 }

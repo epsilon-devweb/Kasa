@@ -1,5 +1,4 @@
 @use '../../scss/utils/mixins' as *;
-@use '../../scss/utils/variables' as *;
 
 html,
 body {
@@ -7,31 +6,37 @@ body {
 }
 
 .footer {
-    @include flex-center-column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background-color: $color-black;
+    background-color: black;
     margin-top: 27px;
 
     &_content {
-        @include flex-center-column;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 66px 120px 58px 120px;
 
         &_img {
-            @include flex;
+            display: flex;
             width: 122px;
             height: 39px;
         }
 
         &>p {
             text-align: center;
-            color: $color-white;
-            font-family: $primary-font;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
             font-size: 12px;
-            font-weight: $font-weight-500;
+            font-weight: 500;
             padding: 0px 10px;
 
             @include desktop {
-                font-size: $font-size-24;
+                font-size: 1.5rem;
             }
         }
     }

@@ -1,19 +1,20 @@
 @use '../../scss/utils/mixins' as *;
-@use '../../scss/utils/variables' as *;
 
 .error404 {
-    @include flex-center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background-color: $color-white;
+    background-color: white;
     gap: 113px;
     padding-bottom: 113px;
 
     .error404_title {
         margin-top: 113px;
         margin-bottom: 0;
-        color: $primary-color;
-        font-family: $primary-font;
+        color: #FF6060;
+        font-family: 'Montserrat', sans-serif;
         font-size: 113px;
     }
 
@@ -38,7 +39,7 @@
         text-decoration-line: underline;
     }
 
-    @include tablet{
+    @include tablet {
         .error404_title {
             font-size: 144px;
         }

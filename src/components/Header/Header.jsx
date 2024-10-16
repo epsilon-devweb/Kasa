@@ -6,8 +6,8 @@ export default function Header() {
         <header className="header">
             <img className="header_img" src={headerLogo} alt="headerLogo"/>
             <div className="header_link">
-            <Link to="/">Accueil</Link>
-            <Link to="/about">A propos</Link>
+            <Link to="/">ACCUEIL</Link>
+            <Link to="/about">A PROPOS</Link>
             </div>
         </header>
     )

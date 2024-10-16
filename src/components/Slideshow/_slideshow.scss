@@ -1,5 +1,4 @@
 @use '../../scss/utils/mixins' as *;
-@use '../../scss/utils/variables' as *;
 
 .carousel {
   display: flex;
@@ -17,16 +16,16 @@
 
   .prevArrow {
     background-color: transparent;
-      border: none;
-      cursor: pointer;
-      position: absolute;
-      width: 15px;
-      height: 20px;
-      top: 50%;
-      left: 10px;
-      z-index: 1;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    top: 50%;
+    left: 10px;
+    z-index: 1;
   }
-  
+
   .nextArrow {
     background-color: transparent;
     border: none;
@@ -39,5 +38,15 @@
     z-index: 1;
   }
 
-}
+  @include tablet {
+    border-radius: 25px;
+    max-width: 728px;
+  }
 
+  @include desktop {
+    min-width: 1240px;
+    height: 415px;
+    border-radius: 25px;
+  }
+
+}

@@ -1,38 +1,66 @@
 @use '../../scss/utils/mixins' as *;
-@use '../../scss/utils/variables' as *;
 
-.CollapseContainer {
-    @include flex-column;
+.HousingCollapseContainer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding-top: 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    gap: 38px;
+    gap: 10px;
 
     @include tablet {
         max-width: 728px;
     }
 
     @include desktop {
-        max-width: 1023px;
+        display: flex;
+        flex-direction: row;
+        max-width: 1240px;
         padding: 25px 0px;
+        margin: 0 auto;
+        gap: 76px;
+    }
+}
+
+.AboutCollapseContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+
+    @include tablet {
+        max-width: 728px;
     }
 
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        max-width: 1024px;
+    }
+}
+
+.Collapse {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
     .collapse_header {
-        @include flex-center;
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        background-color: $primary-color;
+        align-items: center;
+        background-color: #FF6060;
         border-radius: 5px;
         cursor: pointer;
 
         .collapse_title {
-            @include flex;
+            display: flex;
             padding: 10px 20px 10px 15px;
             align-items: center;
-            color: $color-white;
-            font-family: $primary-font;
-            font-size: $font-size-18;
-            font-weight: $font-weight-700;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 700;
             margin: 0;
         }
 
@@ -60,10 +88,18 @@
         border-radius: 0 0 5px 5px;
 
         .collapse_text {
-            font-family: $primary-font;
-            font-size: $font-size-16;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
             line-height: 25px;
             padding: 10px;
+
+            ul {
+                padding: 0 10px;
+            }
+
+            li {
+                list-style-type: none;
+            }
         }
     }
 }

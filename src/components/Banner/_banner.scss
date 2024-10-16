@@ -1,15 +1,16 @@
 @use '../../scss/utils/mixins' as *;
-@use '../../scss/utils/variables' as *;
 
 html,
 body {
     margin: 0;
 }
 
-.HomeBanner, .AboutBanner {
-    @include flex-column;
-    border-radius: $border-radius-10;
-    background-color: $color-black;
+.HomeBanner,
+.AboutBanner {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: black;
     position: relative;
     width: 100%;
     height: 111px;
@@ -17,7 +18,7 @@ body {
     &>img {
         width: 100%;
         height: 100%;
-        border-radius: $border-radius-10;
+        border-radius: 10px;
         object-fit: cover;
         opacity: 0.6;
 
@@ -34,16 +35,18 @@ body {
     &>p {
         position: absolute;
         width: 225px;
-        color: $color-white;
-        font-family: $primary-font;
-        font-size: $font-size-24;
-        font-weight: $font-weight-700;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
         line-height: 24px;
         margin: 0;
         padding: 31px 94px 32px 16px;
 
         @include tablet {
-            @include flex-center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 100%;
             padding: 0px;
@@ -51,11 +54,13 @@ body {
         }
 
         @include desktop {
-            @include flex-center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 100%;
             padding: 0;
-            font-size: $font-size-48;
+            font-size: 3rem;
         }
     }
 
