@@ -18,7 +18,7 @@ export default function Slideshow(props) {
         <div className="carousel">{displayImage()}
             <img className="prevArrow" src={prevArrow} alt="prevArrow" onClick={prevSlide} />
             <img className="nextArrow" src={nextArrow} alt="nextArrow" onClick={nextSlide} />
-            <p className="slideNumber">{`${currentSlide + 1} / ${images.length}`}</p>
+            <span className="slideNumber">{`${currentSlide + 1} / ${images.length}`}</span>
         </div>
     );
 }
