@@ -89,8 +89,6 @@
 
         .collapse_text {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            line-height: 25px;
             padding: 10px;
 
             ul {
@@ -99,6 +97,11 @@
 
             li {
                 list-style-type: none;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 20px;
             }
         }
     }
