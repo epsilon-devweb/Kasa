@@ -246,8 +246,7 @@ body {
     padding: 50px 0px;
   }
 }
-
-.card {
+.card_container .card {
   display: flex;
   align-items: end;
   width: 100%;
@@ -255,19 +254,19 @@ body {
   border-radius: 10px;
 }
 @media screen and (min-width: 768px) {
-  .card {
+  .card_container .card {
     padding: 0px;
     width: 320px;
     height: 320px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .card {
+  .card_container .card {
     width: 340px;
     height: 340px;
   }
 }
-.card > p {
+.card_container .card > p {
   position: absolute;
   width: 30%;
   color: white;
@@ -278,20 +277,20 @@ body {
   padding-left: 20px;
 }
 @media screen and (min-width: 768px) {
-  .card > p {
+  .card_container .card > p {
     display: flex;
     flex-wrap: wrap;
     max-width: 170px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .card > p {
+  .card_container .card > p {
     display: flex;
     flex-wrap: wrap;
     max-width: 170px;
   }
 }
-.card > img {
+.card_container .card > img {
   display: flex;
   align-items: end;
   width: 100%;
@@ -300,13 +299,13 @@ body {
   object-fit: cover;
 }
 @media screen and (min-width: 768px) {
-  .card > img {
+  .card_container .card > img {
     height: 320px;
     border-radius: 10px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .card > img {
+  .card_container .card > img {
     height: 340px;
     border-radius: 10px;
   }
@@ -319,6 +318,14 @@ body {
   height: 255px;
   border-radius: 10px;
   position: relative;
+}
+.carousel .slideNumber {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 .carousel > img {
   width: 100%;
@@ -336,6 +343,12 @@ body {
   left: 10px;
   z-index: 1;
 }
+@media screen and (min-width: 1440px) {
+  .carousel .prevArrow {
+    width: 30px;
+    height: auto;
+  }
+}
 .carousel .nextArrow {
   background-color: transparent;
   border: none;
@@ -346,6 +359,12 @@ body {
   top: 50%;
   right: 10px;
   z-index: 1;
+}
+@media screen and (min-width: 1440px) {
+  .carousel .nextArrow {
+    width: 30px;
+    height: auto;
+  }
 }
 @media screen and (min-width: 768px) {
   .carousel {
@@ -363,27 +382,36 @@ body {
 
 .housingContent {
   display: flex;
-  width: 100%;
-  height: auto;
   flex-direction: column;
   justify-content: flex-start;
+  width: 100%;
+  height: auto;
   gap: 15px;
+  position: relative;
 }
 .housingContent h1 {
   color: #FF6060;
   font-family: Montserrat;
   font-size: 22px;
-  font-style: normal;
   font-weight: 500;
   margin: 0;
+}
+@media screen and (min-width: 1440px) {
+  .housingContent h1 {
+    font-size: 34px;
+  }
 }
 .housingContent p {
   color: #000;
   font-family: Montserrat;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   margin: 0;
+}
+@media screen and (min-width: 1440px) {
+  .housingContent p {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 768px) {
   .housingContent {
@@ -396,70 +424,81 @@ body {
     min-width: 1240px;
   }
 }
-
-.tagContent {
+.housingContent .tagContent {
   display: flex;
   width: 100%;
   height: auto;
-  flex-direction: row;
-  justify-content: flex-start;
   gap: 10px;
 }
-.tagContent .tagSpan {
+.housingContent .tagContent .tagSpan {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: 18px;
   padding: 4px 8px;
   border-radius: 5px;
   background: #FF6060;
-  justify-content: center;
-  align-items: center;
   color: #FFF;
   text-align: center;
   font-family: Montserrat;
   font-size: 12px;
-  font-style: normal;
   font-weight: 700;
 }
-
-.ratingHostContent {
+.housingContent .ratingHostContent {
   display: flex;
-  width: 100%;
-  height: auto;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: auto;
 }
-.ratingHostContent .ratingContent {
+@media screen and (min-width: 1440px) {
+  .housingContent .ratingHostContent {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    position: absolute;
+    gap: 30px;
+  }
+}
+.housingContent .ratingHostContent .ratingContent {
   display: flex;
-  flex-direction: row;
   gap: 5px;
 }
-.ratingHostContent .ratingContent .ratingStar {
+.housingContent .ratingHostContent .ratingContent .ratingStar {
   max-width: 18px;
   min-height: auto;
 }
-.ratingHostContent .hostContent {
+.housingContent .ratingHostContent .hostContent {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 10px;
 }
-.ratingHostContent .hostContent .hostName {
+.housingContent .ratingHostContent .hostContent .hostName {
   width: 93px;
   text-align: right;
   color: #FF6060;
   font-family: Montserrat;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   margin: 0;
 }
-.ratingHostContent .hostContent .hostPicture {
-  width: 32px;
-  height: 32px;
+@media screen and (min-width: 1440px) {
+  .housingContent .ratingHostContent .hostContent .hostName {
+    font-size: 20px;
+  }
+}
+.housingContent .ratingHostContent .hostContent .hostPicture {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
+}
+@media screen and (min-width: 1440px) {
+  .housingContent .ratingHostContent .hostContent .hostPicture {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .HousingCollapseContainer {
@@ -552,8 +591,6 @@ body {
 }
 .Collapse .collapse_content .collapse_text {
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  line-height: 25px;
   padding: 10px;
 }
 .Collapse .collapse_content .collapse_text ul {
@@ -562,12 +599,16 @@ body {
 .Collapse .collapse_content .collapse_text li {
   list-style-type: none;
 }
+.Collapse .collapse_content .collapse_text p {
+  font-size: 16px;
+  line-height: 20px;
+}
 
 .error404 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
   background-color: white;
   gap: 113px;
